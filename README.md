@@ -27,6 +27,19 @@ O algoritmo segue as seguintes etapas:
 
 ---
 
+### 🧭 Diagrama do Fluxo do Programa
+
+Este diagrama representa a lógica de funcionamento do programa de cálculo de notas acadêmicas desenvolvido em linguagem C.
+
+- 📌 **Link do Figma (visualização)**:  
+  [Abrir no Figma](https://www.figma.com/board/84CKqSOhuSD4Yc3flHUkvJ/Untitled?node-id=0-1&t=xkf1ostwAGcp0h9N-1)
+
+- 🖼️ **Visualização do Diagrama (JPG):**
+
+  ![Diagrama do Fluxo](./Diagrama.jpg)
+
+---
+
 ## 💻 Como compilar
 
 ### 🟢 Dev-C++
