@@ -120,5 +120,5 @@ Este projeto é de uso educacional e pode ser modificado ou reutilizado livremen
 | [Samuel Conceição de Souza – @SamDevFocus](https://github.com/SamDevFocus) | [Viniciius Araujo Alves – @vini006dev](https://github.com/vini006dev) |
 |:--:|:--:|
 | ![Samuel Conceição de Souza](https://github.com/SamDevFocus.png?size=500) | ![Viniciius Araujo Alves](https://github.com/vini006dev.png?size=500) |
-
+---
 
