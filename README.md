@@ -42,7 +42,7 @@ Este diagrama representa a lógica de funcionamento do programa de cálculo de n
 
 A documentação completa do projeto está disponível no seguinte arquivo PDF:
 
-[📘 Documentação do Projeto](./Documentacao_Calculadora_Notas.pdf)
+[📘 Documentação do Projeto](./Documentacao_Calculadora_Notas.docx)
 
 Nela, você encontrará:
 - Descrição geral do funcionamento do sistema
