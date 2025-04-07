@@ -38,6 +38,24 @@ Este diagrama representa a lógica de funcionamento do programa de cálculo de n
 
 ---
 
+## 📄 Documentação Oficial
+
+A documentação completa do projeto está disponível no seguinte arquivo PDF:
+
+[📘 Documentação do Projeto](./Documentacao_Calculadora_Notas.pdf)
+
+Nela, você encontrará:
+- Descrição geral do funcionamento do sistema
+- Tecnologias utilizadas
+- Funcionalidades implementadas
+- Guia de compilação e execução no Dev-C++
+- Lógica detalhada do algoritmo
+- Dicionário de dados
+
+Esse documento serve como referência principal para entendimento e manutenção do projeto.
+
+---
+
 ## 💻 Como compilar
 
 ### 🟢 Dev-C++
@@ -99,8 +117,8 @@ Pull Requests são bem-vindos! Se você tem ideias para melhorar o projeto, corr
 Este projeto é de uso educacional e pode ser modificado ou reutilizado livremente para fins acadêmicos.
 
 ---
-| [Samuel Conceição de Souza – @SamDevFocus](https://github.com/SamDevFocus) | [Viniciius Araujo Alves – @seu-usuario](https://github.com/seu-usuario) |
+| [Samuel Conceição de Souza – @SamDevFocus](https://github.com/SamDevFocus) | [Viniciius Araujo Alves – @vini006dev](https://github.com/vini006dev) |
 |:--:|:--:|
-| ![Samuel Conceição de Souza](https://github.com/SamDevFocus.png?size=100) | ![Viniciius Araujo Alves](https://github.com/seu-usuario.png?size=100) |
+| ![Samuel Conceição de Souza](https://github.com/SamDevFocus.png?size=500) | ![Viniciius Araujo Alves](https://github.com/vini006dev.png?size=500) |
 
 
