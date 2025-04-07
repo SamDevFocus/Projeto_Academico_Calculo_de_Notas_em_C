@@ -1,9 +1,7 @@
-
 ---
 
 ### Calculadora de Aprovação
 
-```markdown
 # 🎓 Calculadora de Aprovação – Universidade Braz Cubas
 
 Este é um programa simples em linguagem C que simula o cálculo de aprovação de um aluno com base em três avaliações.
@@ -36,7 +34,7 @@ Este diagrama representa a lógica de funcionamento do programa de cálculo de n
 
 - 🖼️ **Visualização do Diagrama (JPG):**
 
-  ![Diagrama do Fluxo](./Diagrama.jpg)
+  <img src="./Diagrama.jpg" alt="Diagrama do Fluxo" width="5%">
 
 ---
 
@@ -53,8 +51,6 @@ Este diagrama representa a lógica de funcionamento do programa de cálculo de n
 > 💡 Certifique-se de salvar o arquivo com a extensão `.c`, por exemplo: `aprovacao.c`.
 
 ---
-
-```
 
 ### 🪟 GCC (MinGW no Windows)
 
