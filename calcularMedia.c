@@ -60,3 +60,4 @@ void calcularMedia() {
     
     return 0;
 }
+//oi

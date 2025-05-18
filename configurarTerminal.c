@@ -26,3 +26,4 @@ void configurarTerminal() {
 
     SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &cfi);
 }
+//oi

@@ -8,3 +8,4 @@ void mostrarUsuarioLogado(const char *usuarioLogado, const char *rgmLogado) {
         printf("Usuario: Deslogado\n\n");
     }
 }
+//oi

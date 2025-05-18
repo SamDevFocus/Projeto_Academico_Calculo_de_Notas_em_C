@@ -66,4 +66,5 @@ void fazerLogin(char *usuarioLogado, char *rgmLogado) {
     getchar();
     system("cls");
 }
+//oi
 

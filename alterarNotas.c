@@ -98,3 +98,4 @@ void alterarNotas() {
         printf("Aluno com RGM %s nao encontrado.\n", rgmBusca);
     }
 }
+//oi
