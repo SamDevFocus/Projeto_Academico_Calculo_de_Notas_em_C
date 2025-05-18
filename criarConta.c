@@ -23,12 +23,17 @@ void criarConta() {
     char rgm[20];
     
     system("cls");
-
-    printf("=== Criar Conta ===\n");
+    
+    printf("===========================================\n");
+    printf("           REPROVADOR 3000\n");
+    printf("===========================================\n\n");
+    printf("[ CRIACAO DE CONTA]\n");
+    printf("VAMOS CRIAR A SUA CONTA PARA COMECAR.\n\n");
+    printf("-------------------------------------------\n\n");
 
     // Lê o nome e valida se está vazio
     while (1) {
-        printf("Digite seu nome: ");
+        printf("DIGITE SEU NOME: ");
         fgets(nome, sizeof(nome), stdin);
         nome[strcspn(nome, "\n")] = '\0'; // remove \n
 
@@ -41,7 +46,7 @@ void criarConta() {
 
     // Lê o RGM e valida se contém apenas números
     while (1) {
-        printf("Digite seu RGM (apenas numeros): ");
+        printf("DIGITE SEU RGM: ","\n");
         fgets(rgm, sizeof(rgm), stdin);
         rgm[strcspn(rgm, "\n")] = '\0';
 
@@ -76,9 +81,17 @@ void criarConta() {
 
         if (strcmp(rgm, rgmArq) == 0)
         {
-			printf("RGM ja cadastrado.\n");
-            fclose(fp);
-            return;
+		printf("===========================================\n");
+		printf("           REPROVADOR 3000\n");
+		printf("===========================================\n\n");
+
+		printf("[ CRIACAO DE CONTA ]\n");
+		printf("O RGM informado ja esta cadastrado no sistema.\n");
+		printf("Por favor, utilize um RGM diferente para criar a conta.\n");
+		printf("\n-------------------------------------------\n");
+		getchar();
+        fclose(fp);
+        return;
         }
     }
 

@@ -1,6 +1,10 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
+void exibirLogo();
+
+void configurarTerminal();
+
 void mostrarUsuarioLogado(const char *usuarioLogado, const char *rgmLogado); 
 
 void apresentacao();
@@ -20,7 +24,6 @@ void fazerLogin(char *usuarioLogado, char *rgmLogado);
 // Marca o usuário como deletado
 void deletarUsuario();
 
-// void listarAlunos();
 // void exibirNotasUsuario(const char *rgm);
 
 #endif
