@@ -18,8 +18,8 @@ void configurarTerminal() {
     CONSOLE_FONT_INFOEX cfi;
     cfi.cbSize = sizeof(cfi);
     cfi.nFont = 0;
-    cfi.dwFontSize.X = 35; // Largura da fonte
-    cfi.dwFontSize.Y = 54; // Altura da fonte (quanto maior, mais zoom)
+    cfi.dwFontSize.X = 9; // Largura da fonte
+    cfi.dwFontSize.Y = 13; // Altura da fonte (quanto maior, mais zoom)
     cfi.FontFamily = FF_DONTCARE;
     cfi.FontWeight = FW_NORMAL;
     wcscpy(cfi.FaceName, L"Consolas"); // Fonte padrão do terminal

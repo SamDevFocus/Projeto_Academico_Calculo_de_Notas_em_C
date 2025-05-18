@@ -27,9 +27,9 @@ void calcularMedia() {
     if (soma >= 6) {
         printf("Nota: %.2f - Aluno aprovado.\n", soma);
     } else {
-        printf("Nota: %.2f - Nota inferior a 6. Sera necessario realizar a Avaliacao A3.\n", soma);
+        printf("Nota: %.2f - Nota inferior a 6. Sera necessario realizar a avaliacao final.\n", soma);
 
-        // Solicita e valida a nota da A3
+        // Solicita e valida a nota da avaliacao final
         do {
             printf("Insira a nota da Avalaliação final (0 a 5): ");
             scanf("%f", &Af);
@@ -40,7 +40,7 @@ void calcularMedia() {
 
       
         if (A1 < A2) { // substituição das notas (se a nota1 for menor que nota2, logo nota 1 é a menor nota
-            A1 = Af;   // se nota 1 e a menor então ela e igual a notaa3 (substituição)
+            A1 = Af;   // se nota 1 e a menor então ela e igual a Af (substituição)
         } else {
             A2 = Af;
         }
@@ -50,7 +50,7 @@ void calcularMedia() {
 
         // Resultado final
         if (soma >= 6) {
-            printf("Nova nota: %.2f - Aluno aprovado apos Af.\n", soma);
+            printf("Nova nota: %.2f - Aluno aprovado apos Avaliacao final.\n", soma);
         } else {
             printf("Nova nota: %.2f - Aluno reprovado.\n", soma);
         }
