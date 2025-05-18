@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <locale.h>
 
 void deletarUsuario() {
+	setlocale(LC_ALL,"Portuguese_Brazil.1252");
     char rgmExcluir[20];
     char linha[100];
     int encontrado = 0;
     
-    configurarTerminal2();
 
     system("cls"); // limpa a tela no Windows
 

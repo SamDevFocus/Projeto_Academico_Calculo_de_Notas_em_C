@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 #include <ctype.h>  // para toupper()
 #include "login.h"
 
 int main()
 {
+   setlocale(LC_ALL,"Portuguese_Brazil.1252");
+   configurarTerminal();
     char usuarioLogado[50] = "";
     char rgmLogado[20] = "";
     int opcao;
     char resposta;
 
-    exibirLogo();
     system("cls");
 
     apresentacao();
@@ -30,14 +32,14 @@ int main()
     }
     else
     {
-        printf("Opcao invalida! Encerrando o programa.\n");
+        printf("Opcao inválida! Encerrando o programa.\n");
         return 1;
     }
 
     do
     {
     	exibirLogo();
-    	configurarTerminal2();
+    	
         system("cls");
 
         printf("===========================================\n");
@@ -49,13 +51,13 @@ int main()
         printf(">>>>>>>>>>>>>>  MENU PRINCIPAL  <<<<<<<<<<<<<<\n");
         printf("*-------------------------------------------*\n");
         printf("| 1  Criar conta                            |\n");
-        printf("| 2  Listar usuarios                        |\n");
+        printf("| 2  Listar usuários                        |\n");
         printf("| 3  Deletar usuario                        |\n");
         printf("| 4  Fazer login                            |\n");
-        printf("| 5  Calcular media                         |\n");
+        printf("| 5  Calcular média                         |\n");
         printf("| 6  Sair                                   |\n");
         printf("*-------------------------------------------*\n");
-        printf("Digite o numero da opcao desejada\n");
+        printf("Digite o número da opção desejada\n");
         printf(">>> ");
         scanf("%d", &opcao);
         getchar(); // limpa o \n do buffer
@@ -75,7 +77,7 @@ int main()
             fazerLogin(usuarioLogado, rgmLogado);
             if (usuarioLogado[0] != '\0')
             {
-                printf("Usuario logado: %s (RGM: %s)\n", usuarioLogado, rgmLogado);
+                printf("Usuário logado: %s (RGM: %s)\n", usuarioLogado, rgmLogado);
             }
             else
             {
@@ -89,7 +91,7 @@ int main()
             printf("Saindo...\n");
             break;
         default:
-            printf("Opcao invalida! Tente novamente.\n");
+            printf("Opção inválida! Tente novamente.\n");
         }
 
         system("pause");

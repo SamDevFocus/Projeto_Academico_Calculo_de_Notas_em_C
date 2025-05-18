@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <locale.h>
 
 // Função para verificar se uma string contém apenas dígitos
 
 int apenasNumeros(const char *str) {
-	
+	setlocale(LC_ALL,"Portuguese_Brazil.1252");
 		system("cls");
 	
     int i;
@@ -27,8 +28,8 @@ void criarConta() {
     printf("===========================================\n");
     printf("           REPROVADOR 3000\n");
     printf("===========================================\n\n");
-    printf("[ CRIACAO DE CONTA]\n");
-    printf("VAMOS CRIAR A SUA CONTA PARA COMECAR.\n\n");
+    printf("[ CRIAÇÃO DE CONTA]\n");
+    printf("VAMOS CRIAR A SUA CONTA PARA COMEÇAR.\n\n");
     printf("-------------------------------------------\n\n");
 
     // Lê o nome e valida se está vazio
@@ -38,7 +39,7 @@ void criarConta() {
         nome[strcspn(nome, "\n")] = '\0'; // remove \n
 
         if (strlen(nome) == 0) {
-            printf("Nome nao pode estar vazio.\n");
+            printf("Nome não pode estar vazio.\n");
         } else {
             break;
         }
@@ -51,7 +52,7 @@ void criarConta() {
         rgm[strcspn(rgm, "\n")] = '\0';
 
         if (strlen(rgm) == 0) {
-            printf("RGM nao pode estar vazio.\n");
+            printf("RGM não pode estar vazio.\n");
         } else if (!apenasNumeros(rgm)) {
             printf("RGM deve conter apenas numeros.\n");
         } else {
@@ -86,7 +87,7 @@ void criarConta() {
 		printf("===========================================\n\n");
 
 		printf("[ CRIACAO DE CONTA ]\n");
-		printf("O RGM informado ja esta cadastrado no sistema.\n");
+		printf("O RGM informado já está cadastrado no sistema.\n");
 		printf("Por favor, utilize um RGM diferente para criar a conta.\n");
 		printf("\n-------------------------------------------\n");
 		getchar();

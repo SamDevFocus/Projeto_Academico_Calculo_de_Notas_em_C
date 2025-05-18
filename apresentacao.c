@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include <locale.h>
 
 void apresentacao() {
-	
-	configurarTerminal2();
+	setlocale(LC_ALL,"Portuguese_Brazil.1252");
+ 	exibirLogo();
 
     printf("===========================================\n");
     printf("//////////     SOBRE O PROGRAMA     \\\\\\\\\\\\\\\\\\\n");
     printf("===========================================\n");
     printf("*-------------------------------------------*\n");
-    printf("| Um sistema direto que calcula a media     |\n");
+    printf("| Um sistema direto que calcula a média     |\n");
     printf("| Informa se foram aprovados ou reprovados  |\n");
     printf("| Exibe as notas de todos os cadastrados    |\n");
     printf("| Facilita o acompanhamento da turma        |\n");
@@ -18,9 +19,9 @@ void apresentacao() {
     printf("//////////    ACESSO AO SISTEMA     \\\\\\\\\\\\\\\\\\\n");
     printf("===========================================\n");
     printf("*-------------------------------------------*\n");
-    printf("| Voce ja tem uma conta no sistema?         |\n");
+    printf("| Você já tem uma conta no sistema?         |\n");
     printf("| S - Sim                                   |\n");
-    printf("| N - Nao                                   |\n");
+    printf("| N - Não                                   |\n");
     printf("*-------------------------------------------*\n");
     printf("Digite sua escolha\n");
     printf(">>> ");

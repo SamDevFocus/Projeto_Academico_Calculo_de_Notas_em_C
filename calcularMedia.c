@@ -1,24 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 void calcularMedia() {
+	setlocale(LC_ALL,"Portuguese_Brazil.1252");
     float A1, A2, Af, soma;
 
     // Solicita e valida a nota da Avaliação A1
     do {
-        printf("Insira a nota da Avaliacao A1 (0 a 5): ");
+        printf("Insira a nota da Avaliação A1 (0 a 5): ");
         scanf("%f", &A1);
         if (A1 < 0 || A1 > 5) {
-            printf("Nota invalida. Tente novamente.\n");
+            printf("Nota inválida. Tente novamente.\n");
         }
     } while (A1 < 0 || A1 > 5);
 
     // Solicita e valida a nota da Avaliação A2
     do {
-        printf("Insira a nota da Avaliacao A2 (0 a 5): ");
+        printf("Insira a nota da Avaliação A2 (0 a 5): ");
         scanf("%f", &A2);
         if (A2 < 0 || A2 > 5) {
-            printf("Nota invalida. Tente novamente.\n");
+            printf("Nota inválida. Tente novamente.\n");
         }
     } while (A2 < 0 || A2 > 5);
 
@@ -27,14 +29,14 @@ void calcularMedia() {
     if (soma >= 6) {
         printf("Nota: %.2f - Aluno aprovado.\n", soma);
     } else {
-        printf("Nota: %.2f - Nota inferior a 6. Sera necessario realizar a avaliacao final.\n", soma);
+        printf("Nota: %.2f - Nota inferior a 6. Sera necessário realizar a avaliação final.\n", soma);
 
         // Solicita e valida a nota da avaliacao final
         do {
             printf("Insira a nota da Avalaliação final (0 a 5): ");
             scanf("%f", &Af);
             if (Af < 0 || Af > 5) {
-                printf("Nota invalida. Tente novamente.\n");
+                printf("Nota inválida. Tente novamente.\n");
             }
         } while (Af < 0 || Af > 5);
 
@@ -50,7 +52,7 @@ void calcularMedia() {
 
         // Resultado final
         if (soma >= 6) {
-            printf("Nova nota: %.2f - Aluno aprovado apos Avaliacao final.\n", soma);
+            printf("Nova nota: %.2f - Aluno aprovado apos Avaliação final.\n", soma);
         } else {
             printf("Nova nota: %.2f - Aluno reprovado.\n", soma);
         }

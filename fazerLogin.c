@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <locale.h>
 
 void fazerLogin(char *usuarioLogado, char *rgmLogado) {
+	setlocale(LC_ALL,"Portuguese_Brazil.1252");
     char rgm[20];
     
     system("cls");
@@ -11,7 +13,7 @@ void fazerLogin(char *usuarioLogado, char *rgmLogado) {
     printf("           REPROVADOR 3000\n");
     printf("===========================================\n\n");
 
-    printf("[ LOGIN DO USUARIO ]\n");
+    printf("[ LOGIN DO USUÁRIO ]\n");
     printf("Informe os dados da sua conta para continuar.\n\n");
 
     printf("-------------------------------------------\n");
@@ -21,11 +23,11 @@ void fazerLogin(char *usuarioLogado, char *rgmLogado) {
     rgm[strcspn(rgm, "\n")] = '\0';    // remove \n
     printf("-------------------------------------------\n\n");
 
-    printf("Verificando informacoes...\n\n");
+    printf("Verificando informações...\n\n");
 
     FILE *fp = fopen("alunosBrazCubaz.txt", "r");
     if (!fp) {
-        printf("Erro ao abrir o arquivo de usuarios.\n");
+        printf("Erro ao abrir o arquivo de usuários.\n");
         return;
     }
 
@@ -55,7 +57,7 @@ void fazerLogin(char *usuarioLogado, char *rgmLogado) {
     if (encontrado) {
         printf("Acesso concedido! Bem-vindo de volta, %s.\n", usuarioLogado);
     } else {
-        printf("Usuario nao encontrado ou esta marcado como deletado.\n");
+        printf("Usuário não encontrado ou esta marcado como deletado.\n");
         // Limpa as strings para indicar que não tem ninguém logado
         usuarioLogado[0] = '\0';
         rgmLogado[0] = '\0';

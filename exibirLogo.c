@@ -6,7 +6,7 @@
 
 void exibirLogo() {
     int i;
-	configurarTerminal();
+	
     // Obtém o tamanho do console
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
