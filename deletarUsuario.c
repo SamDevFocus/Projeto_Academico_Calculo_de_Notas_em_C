@@ -2,14 +2,22 @@
 #include <string.h>
 #include <stdlib.h>
 
-void deletarUsuario()
-{
+void deletarUsuario() {
     char rgmExcluir[20];
     char linha[100];
     int encontrado = 0;
+    
+    configurarTerminal2();
 
-    printf("=== Deletar Usuario ===\n");
-    printf("Digite o RGM do usuario a ser deletado: ");
+    system("cls"); // limpa a tela no Windows
+
+    printf("===========================================\n");
+    printf("//////////     DELETAR USUÁRIO     \\\\\\\\\\\\\\\\\\\n");
+    printf("===========================================\n");
+    printf("*-------------------------------------------*\n");
+    printf("| Digite o RGM do usuário a ser deletado:   |\n");
+    printf("*-------------------------------------------*\n");
+    printf(">>> ");
     fgets(rgmExcluir, sizeof(rgmExcluir), stdin);
     rgmExcluir[strcspn(rgmExcluir, "\n")] = '\0'; // remove \n
 
@@ -18,7 +26,7 @@ void deletarUsuario()
 
     if (!orig || !temp)
     {
-        printf("Erro ao abrir os arquivos.\n");
+        printf("\n[ERRO] Não foi possível abrir os arquivos.\n");
         return;
     }
 
@@ -44,14 +52,16 @@ void deletarUsuario()
     remove("alunosBrazCubaz.txt");
     rename("temp.txt", "alunosBrazCubaz.txt");
 
+    printf("\n===========================================\n");
     if (encontrado)
     {
-        printf("Usuario com RGM %s foi marcado como DELETADO.\n", rgmExcluir);
-        system("pause"); // no Windows
-		system("cls");
+        printf("[SUCESSO] Usuário com RGM %s foi marcado como DELETADO.\n", rgmExcluir);
     }
     else
     {
-        printf("Usuario nao encontrado ou ja esta marcado como DELETADO.\n");
+        printf("[AVISO] Usuário não encontrado ou já está marcado como DELETADO.\n");
     }
+    printf("===========================================\n");
+    system("pause"); 
 }
+
