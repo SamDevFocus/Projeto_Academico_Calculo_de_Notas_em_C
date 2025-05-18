@@ -38,7 +38,8 @@ int main() {
         printf("3. Deletar usuario\n");
         printf("4. Fazer login\n");
         printf("5. Calcular Media\n");
-        printf("6. Sair\n");
+        printf("6. Alterar Nota\n");
+        printf("7. Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
         getchar(); // limpa o \n do buffer
@@ -63,8 +64,11 @@ int main() {
                 break;
             case 5:
                 calcularMedia();
-                break;
-            case 6:
+			    break;
+			case 6:
+			    alterarNotas(); 
+				break;		
+            case 7:
                 printf("Saindo...\n");
                 break;
             default:

@@ -1,0 +1,52 @@
+# Project: Project5
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = mostrarUsuarioLogado.o main.o listarUsuarios.o fazerLogin.o deletarUsuario.o criarConta.o calcularMedia.o apresentacao.o alterarNotas.o
+LINKOBJ  = mostrarUsuarioLogado.o main.o listarUsuarios.o fazerLogin.o deletarUsuario.o criarConta.o calcularMedia.o apresentacao.o alterarNotas.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Project5.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+mostrarUsuarioLogado.o: mostrarUsuarioLogado.c
+	$(CC) -c mostrarUsuarioLogado.c -o mostrarUsuarioLogado.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+listarUsuarios.o: listarUsuarios.c
+	$(CC) -c listarUsuarios.c -o listarUsuarios.o $(CFLAGS)
+
+fazerLogin.o: fazerLogin.c
+	$(CC) -c fazerLogin.c -o fazerLogin.o $(CFLAGS)
+
+deletarUsuario.o: deletarUsuario.c
+	$(CC) -c deletarUsuario.c -o deletarUsuario.o $(CFLAGS)
+
+criarConta.o: criarConta.c
+	$(CC) -c criarConta.c -o criarConta.o $(CFLAGS)
+
+calcularMedia.o: calcularMedia.c
+	$(CC) -c calcularMedia.c -o calcularMedia.o $(CFLAGS)
+
+apresentacao.o: apresentacao.c
+	$(CC) -c apresentacao.c -o apresentacao.o $(CFLAGS)
+
+alterarNotas.o: alterarNotas.c
+	$(CC) -c alterarNotas.c -o alterarNotas.o $(CFLAGS)
