@@ -10,7 +10,7 @@ void fazerLogin(char *usuarioLogado, char *rgmLogado) {
     system("cls");
 
     printf("===========================================\n");
-    printf("           REPROVADOR 3000\n");
+    printf("           BRAZ CUBAS\n");
     printf("===========================================\n\n");
 
     printf("[ LOGIN DO USUÁRIO ]\n");

@@ -43,7 +43,7 @@ int main()
         system("cls");
 
         printf("===========================================\n");
-        printf("//////////     REPROVADOR 3000     \\\\\\\\\\\\\\\\\\\n");
+        printf("//////////     BRAZ CUBAS     \\\\\\\\\\\\\\\\\\\n");
         printf("===========================================\n\n");
 
         mostrarUsuarioLogado(usuarioLogado, rgmLogado);
@@ -55,7 +55,8 @@ int main()
         printf("| 3  Deletar usuario                        |\n");
         printf("| 4  Fazer login                            |\n");
         printf("| 5  Calcular média                         |\n");
-        printf("| 6  Sair                                   |\n");
+        printf("| 6  Altarar nota                           |\n");
+        printf("| 7  Sair                                   |\n");
         printf("*-------------------------------------------*\n");
         printf("Digite o número da opção desejada\n");
         printf(">>> ");
@@ -88,6 +89,9 @@ int main()
             calcularMedia();
             break;
         case 6:
+            alterarNotas();
+            break;
+        case 7:
             printf("Saindo...\n");
             break;
         default:
