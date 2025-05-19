@@ -1,49 +1,63 @@
 #include <stdio.h>
 #include <windows.h>
+#include <stdlib.h>
 
-// Conta quantas linhas tem a logo
-#define LINHAS_LOGO 8
+
+int contarLinhasArquivo(const char *nomeArquivo) {
+    FILE *fp = fopen(nomeArquivo, "r");
+    if (!fp) {
+        printf("Erro ao abrir o arquivo %s\n", nomeArquivo);
+        return 0;
+    }
+    int linhas = 0;
+    char buffer[512];
+    while (fgets(buffer, sizeof(buffer), fp)) {
+        linhas++;
+    }
+    fclose(fp);
+    return linhas;
+}
 
 void exibirLogo() {
-    int i;
-	
-    // Obtém o tamanho do console
+    const char *nomeArquivo = "asciiart.txt";
+
+    configurarTerminal();
+
+    int linhasLogo = contarLinhasArquivo(nomeArquivo);
+    if (linhasLogo == 0) {
+        printf("Arquivo vazio ou nao encontrado.\n");
+        return;
+    }
+
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
     int alturaConsole = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
 
-    // Calcula a posição inicial para centralizar verticalmente
-    int linhasAntes = (alturaConsole - LINHAS_LOGO) / 2;
+    int linhasAntes = (alturaConsole - linhasLogo) / 2;
+    if (linhasAntes < 0) linhasAntes = 0;
 	int repeticao;
     for (repeticao = 0; repeticao < 2; repeticao++) {
         system("cls");
-
+		int i;
         for (i = 0; i < linhasAntes; i++) {
             printf("\n");
         }
 
-        // Exibe a logo linha por linha com pausa
-        printf("8888888b.  8888888888 8888888b.  8888888b.   .d88888b.  888     888 8888888b.         d8888 8888888b.   .d88888b.  8888888b.        .d8888b.   .d8888b.   .d8888b.   .d8888b.  \n");
-        Sleep(100);
-        printf("888   Y88b 888        888   Y88b 888   Y88b d88P\" \"Y88b 888     888 888   Y88b       d88888 888  \"Y88b d88P\" \"Y88b 888   Y88b      d88P  Y88b d88P  Y88b d88P  Y88b d88P  Y88b \n");
-        Sleep(100);
-        printf("888    888 888        888    888 888    888 888     888 888     888 888    888      d88P888 888    888 888     888 888    888           .d88P 888    888 888    888 888    888 \n");
-        Sleep(100);
-        printf("888   d88P 8888888    888   d88P 888   d88P 888     888 Y88b   d88P 888   d88P     d88P 888 888    888 888     888 888   d88P          8888\"  888    888 888    888 888    888 \n");
-        Sleep(100);
-        printf("8888888P\"  888        8888888P\"  8888888P\"  888     888  Y88b d88P  8888888P\"     d88P  888 888    888 888     888 8888888P\"            \"Y8b. 888    888 888    888 888    888 \n");
-        Sleep(100);
-        printf("888 T88b   888        888        888 T88b   888     888   Y88o88P   888 T88b     d88P   888 888    888 888     888 888 T88b        888    888 888    888 888    888 888    888 \n");
-        Sleep(100);
-        printf("888  T88b  888        888        888  T88b  Y88b. .d88P    Y888P    888  T88b   d8888888888 888  .d88P Y88b. .d88P 888  T88b       Y88b  d88P Y88b  d88P Y88b  d88P Y88b  d88P \n");
-        Sleep(100);
-        printf("888   T88b 8888888888 888        888   T88b  \"Y88888P\"      Y8P     888   T88b d88P     888 8888888P\"   \"Y88888P\"  888   T88b       \"Y8888P\"   \"Y8888P\"   \"Y8888P\"   \"Y8888P\"  \n");
+        FILE *fp = fopen(nomeArquivo, "r");
+        if (!fp) {
+            printf("Erro ao abrir o arquivo %s\n", nomeArquivo);
+            return;
+        }
 
-        Sleep(1000); // espera 1 segundo com a logo visível
+        char linha[512];
+        while (fgets(linha, sizeof(linha), fp)) {
+            printf("%s", linha);
+        }
+        fclose(fp);
+
+        Sleep(1000);
     }
 
-    system("cls"); // limpa ao final
-    return 0;
+    system("cls");
 }
-//oi
 
