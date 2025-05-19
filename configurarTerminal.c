@@ -7,7 +7,7 @@ void configurarTerminal() {
 	setlocale(LC_ALL,"Portuguese_Brazil.1252");
     // Muda cor e t�tulo
     system("color 01"); // Fundo preto, texto azul claro
-    system("title REPROVADOR 3000");
+    system("BRAZ CUBAS");
 
     // Define o modo com muitas colunas e linhas (zoom virtual)
     system("mode con: cols=180 lines=50"); // Aumenta o conte�do da janela

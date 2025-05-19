@@ -1,7 +1,7 @@
 [Editor_0]
-CursorCol=45
-CursorRow=86
-TopLine=55
+CursorCol=1
+CursorRow=1
+TopLine=1
 LeftChar=1
 [Editor_1]
 CursorCol=6
@@ -21,7 +21,7 @@ LeftChar=1
 [Editor_4]
 CursorCol=1
 CursorRow=29
-TopLine=17
+TopLine=1
 LeftChar=1
 [Editor_6]
 CursorCol=1
@@ -34,8 +34,8 @@ CursorRow=33
 TopLine=24
 LeftChar=1
 [Editor_8]
-CursorCol=46
-CursorRow=19
+CursorCol=5
+CursorRow=29
 TopLine=1
 LeftChar=1
 [Editor_9]
@@ -51,7 +51,7 @@ LeftChar=1
 [Editor_10]
 CursorCol=2
 CursorRow=10
-TopLine=1
+TopLine=60
 LeftChar=1
 [Editor_11]
 CursorCol=2

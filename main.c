@@ -37,9 +37,7 @@ int main()
     }
 
     do
-    {
-    	exibirLogo();
-    	
+    {	
         system("cls");
 
         printf("===========================================\n");
@@ -98,9 +96,8 @@ int main()
             printf("Opção inválida! Tente novamente.\n");
         }
 
-        system("pause");
 
-    } while (opcao != 6);
+    } while (opcao != 7);
 
     return 0;
 }
