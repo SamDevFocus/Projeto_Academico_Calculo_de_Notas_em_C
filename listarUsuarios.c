@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
+#include <windows.h>
 
 void listarUsuarios() {
     setlocale(LC_ALL,"Portuguese_Brazil.1252");
@@ -41,6 +42,7 @@ void listarUsuarios() {
             if (strncmp(nome, "DELETADO_", 9) != 0) {
                 printf("Nome: %-20s | RGM: %-11s | Nota1: %.1f | Nota2: %.1f | Final: %.1f\n",
                        nome, rgm, nota1, nota2, notaFinal);
+                       Sleep(10);
             }
         } else if (nome && rgm) {
             if (strncmp(nome, "DELETADO_", 9) != 0) {
