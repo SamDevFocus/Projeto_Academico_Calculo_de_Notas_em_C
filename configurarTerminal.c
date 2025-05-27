@@ -6,7 +6,7 @@
 void configurarTerminal() {
 	setlocale(LC_ALL,"Portuguese_Brazil.1252");
     // Muda cor e t�tulo
-    system("color 01"); // Fundo preto, texto azul claro
+    system("color F0");
     system("BRAZ CUBAS");
 
     // Define o modo com muitas colunas e linhas (zoom virtual)
